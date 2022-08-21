@@ -7,11 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>second page</h1>
-    <ul>
-        {% for lead in leads %}
-        <li>{{ lead }}</li>
-        {% endfor %}
-    </ul>
+    <a href="/leads">go back </a>
+    <h1>Create a new lead</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    
+
 </body>
 </html>
