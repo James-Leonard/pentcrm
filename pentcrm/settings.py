@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     #app
     'leads',
+    'agents',
 ]
 
 MIDDLEWARE = [
