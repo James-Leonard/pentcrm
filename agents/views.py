@@ -31,7 +31,6 @@ class AgentCreateView(OrganisorAndLoginRequiredMixin, generic.CreateView):
             user=user,
             organisation=self.request.user.userprofile
         )
-        #stop at around 1:45am video time:6:04:37
         send_mail(
             subject="You are invited to be an agent",
             message="You were added as an agent on PENTCRM. PLease come login to start working.",
