@@ -1,7 +1,7 @@
 from urllib import request
 from django import forms
 from django.contrib.auth import get_user_model
-from .models import Lead, Agent
+from .models import Lead, Agent, Category
 from django.contrib.auth.forms import UserCreationForm, UsernameField
 
 User = get_user_model()
@@ -44,4 +44,11 @@ class LeadCategoryUpdateForm(forms.ModelForm):
         model = Lead
         fields = (
             'category', 
+        )
+
+class CategoryModelForm(forms.ModelForm):
+    class Meta:
+        model = Category
+        fields = (
+            'name',
         )
