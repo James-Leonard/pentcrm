@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     # Third pary_app
     'crispy_forms',
     'crispy_tailwind',
+    'import_export',
 
     #app
     'leads',
